@@ -8,7 +8,7 @@ public partial class NDArray<T> where T : INumber<T>
     {
         if (IsScalar)
         {
-            _scalar = _scalar += val;
+            _scalar += val;
             return;
         }
 
