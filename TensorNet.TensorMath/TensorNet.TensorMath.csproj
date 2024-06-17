@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Include="obj\NDArray_Oper_Mul.cs" />
+    </ItemGroup>
+
 </Project>

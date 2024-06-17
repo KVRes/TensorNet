@@ -20,6 +20,11 @@ public partial class NDArray<T> where T : INumber<T>
 
     public void Add(NDArray<T> o)
     {
+        if (o.IsScalar)
+        {
+            AddScalar(o._scalar);
+            return;
+        }
         if (IsScalar != o.IsScalar) throw new InvalidOperationException("Should be same scalar");
         throw new NotImplementedException("");
     }
