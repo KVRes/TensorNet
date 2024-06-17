@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorNet.TensorMath", "TensorNet.TensorMath\TensorNet.TensorMath.csproj", "{67DD6251-D7DE-42A2-A8B7-2230558B5956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorNet.TensorCore", "TensorNet.TensorCore\TensorNet.TensorCore.csproj", "{09CEDD81-F565-463A-9A85-57FD65185B0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67DD6251-D7DE-42A2-A8B7-2230558B5956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DD6251-D7DE-42A2-A8B7-2230558B5956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DD6251-D7DE-42A2-A8B7-2230558B5956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DD6251-D7DE-42A2-A8B7-2230558B5956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

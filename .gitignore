@@ -1,0 +1,11 @@
+.cr/
+.vs/
+.vscode/
+.idea/
+
+**/[Oo]bj
+**/[Bb]in
+
+*.exe
+*.dll
+*.pdb
