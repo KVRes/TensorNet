@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorNet.TensorMath", "Ten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorNet.TensorCore", "TensorNet.TensorCore\TensorNet.TensorCore.csproj", "{09CEDD81-F565-463A-9A85-57FD65185B0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorNet.TensorMathTest", "TensorNet.TensorMathTest\TensorNet.TensorMathTest.csproj", "{E63727E6-2DA6-4821-9244-8DBF454C8ABF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09CEDD81-F565-463A-9A85-57FD65185B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63727E6-2DA6-4821-9244-8DBF454C8ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63727E6-2DA6-4821-9244-8DBF454C8ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63727E6-2DA6-4821-9244-8DBF454C8ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63727E6-2DA6-4821-9244-8DBF454C8ABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
