@@ -1,9 +1,13 @@
+using System.Numerics;
+
 namespace TensorNet.TensorMath;
 
-public partial class NDArray
+public partial class NDArray<T> where T : IAdditionOperators<T, T, T>
 {
     public int Dim { get; private set; }
-    public int[] Shape {
+
+    public int[] Shape
+    {
         get
         {
             if (IsScala) return ReadOnly.EmptyShape;
@@ -14,24 +18,25 @@ public partial class NDArray
             return l.ToArray();
         }
     }
-    private NDArray[]? _data;
-    private float? _scala;
-    
-    public bool IsScala => _scala.HasValue;
+
+    private NDArray<T>[]? _data;
+    private T? _scala;
+
+    public bool IsScala => _data == null;
     public bool IsArray => _data != null;
 
     public dynamic ToArray()
     {
-        if (IsScala) return this._scala!.Value;
+        if (IsScala) return this._scala!;
         var l = new List<dynamic>();
         foreach (var item in _data!)
         {
             l.Add(item.ToArray());
         }
+
         return l.ToArray();
     }
-    
-    
-    public string ToString() => $"NDArray({string.Join(", ", Shape)})";
-}
 
+
+    public override string ToString() => $"NDArray({string.Join(", ", Shape)})";
+}

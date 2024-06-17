@@ -14,7 +14,7 @@ public class Tests
     [Test]
     public void Test1()
     {
-        var arr = new NDArray(shape: [2, 3]);
+        var arr = new NDArray<float>(shape: [2, 3]);
         arr.Shape.Output();
         JOut.WriteLine(arr.ToArray());
     }
@@ -22,8 +22,8 @@ public class Tests
     [Test]
     public void Test2()
     {
-        Random.NormalInitializer(0, 1)().Output();
-        var arr = new NDArray(shape: [3, 3], initializer: Random.NormalInitializer(0, 1));
+        var arr = new NDArray<float>(shape: [3, 3], initializer: Random.NormalInitializer(0, 1));
+        Console.WriteLine(arr.Raw());
         arr.Shape.Output();
         JOut.WriteLine(arr.ToArray());
     }

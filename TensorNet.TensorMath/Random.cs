@@ -3,9 +3,13 @@ namespace TensorNet.TensorMath;
 public class Random
 {
     private static System.Random _r = new();
+
+    public static T Default<T>() => default;
+
     public static float Zero() => 0;
 
     public static float One() => 1;
+    
     public static Func<float> ConstantInitializer(float val) => () => val;
 
     public static float Normal(float mu = 0, float sigma = 1)
