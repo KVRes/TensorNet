@@ -2,7 +2,7 @@ using System.Numerics;
 
 namespace TensorNet.TensorMath;
 
-public partial class NDArray<T> where T : IAdditionOperators<T, T, T>
+public partial class NDArray<T> where T : INumber<T>
 {
     public int Dim { get; private set; }
 
@@ -10,7 +10,7 @@ public partial class NDArray<T> where T : IAdditionOperators<T, T, T>
     {
         get
         {
-            if (IsScala) return ReadOnly.EmptyShape;
+            if (IsScalar) return ReadOnly.EmptyShape;
             var prev = this._data![0].Shape;
             var l = new List<int>();
             l.Add(_data!.Length);
@@ -20,14 +20,14 @@ public partial class NDArray<T> where T : IAdditionOperators<T, T, T>
     }
 
     private NDArray<T>[]? _data;
-    private T? _scala;
+    private T? _scalar;
 
-    public bool IsScala => _data == null;
+    public bool IsScalar => _data == null;
     public bool IsArray => _data != null;
 
     public dynamic ToArray()
     {
-        if (IsScala) return this._scala!;
+        if (IsScalar) return this._scalar!;
         var l = new List<dynamic>();
         foreach (var item in _data!)
         {
@@ -35,6 +35,20 @@ public partial class NDArray<T> where T : IAdditionOperators<T, T, T>
         }
 
         return l.ToArray();
+    }
+
+
+    public NDArray<T> Copy()
+    {
+        if (this.IsScalar) return new NDArray<T>(scalar: _scalar);
+
+        var m = new NDArray<T>([_data.Length]);
+        for (int i = 0; i < _data.Length; i++)
+        {
+            m._data[i] = _data[i].Copy();
+        }
+
+        return m;
     }
 
 

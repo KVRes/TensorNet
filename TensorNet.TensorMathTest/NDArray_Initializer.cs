@@ -23,7 +23,7 @@ public class Tests
     public void Test2()
     {
         var arr = new NDArray<float>(shape: [3, 3], initializer: Random.NormalInitializer(0, 1));
-        Console.WriteLine(arr.Raw());
+        Console.WriteLine("HI");
         arr.Shape.Output();
         JOut.WriteLine(arr.ToArray());
     }
