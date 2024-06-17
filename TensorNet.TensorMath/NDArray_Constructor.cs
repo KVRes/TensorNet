@@ -1,5 +1,4 @@
 using System.Numerics;
-using TensorNet.TensorMath.Extension;
 
 namespace TensorNet.TensorMath;
 
